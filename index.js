@@ -1,10 +1,19 @@
-let messageEl = document.getElementById('input-btn')
+let myLeads = ""
+const inputBtn = document.getElementById('input-btn')
+const inputEl = document.getElementById('inputEl')
+
+inputBtn.addEventListener("click", function(){
+    inputBtn.textContent = "Button Clicked"
+})
+
+
+
+
+
+
+
 let theBox = document.getElementById('openBox')
 
-function clickButton() {
-    messageEl.textContent = "Button Clicked"
-}
-
 theBox.addEventListener("click", function(){
-    console.log("Quero abrir esta caixa")
-}
+    theBox.textContent = ("Quero abrir esta caixa")
+})

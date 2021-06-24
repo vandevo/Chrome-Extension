@@ -1,9 +1,10 @@
-let myLeads = ""
+let myLeads = []
 const inputBtn = document.getElementById('input-btn')
-const inputEl = document.getElementById('inputEl')
+const inputEl = document.getElementById('input-el')
 
 inputBtn.addEventListener("click", function(){
-    inputBtn.textContent = "Button Clicked"
+    myLeads.push(inputEl.value)
+    inputBtn.textContent = myLeads
 })
 
 

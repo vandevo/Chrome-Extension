@@ -2,6 +2,9 @@
 
     box-sizing: border-box;
     margin-bottom: 10px;
+    width: 50%;
+    
+    
 }
 
 
@@ -11,6 +14,9 @@ body {
     
 }
 
+#ul-el {
+    padding-left: 30px;
+}
 
 #openBox {
     margin-top: 15px;

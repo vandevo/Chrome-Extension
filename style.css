@@ -15,7 +15,9 @@ body {
 }
 
 #ul-el {
-    padding-left: 30px;
+    padding-left: 0px;
+    list-style: none;
+    margin-top: 5px;
 }
 
 #openBox {

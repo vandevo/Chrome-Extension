@@ -2,12 +2,13 @@ let myLeads = []
 const inputBtn = document.getElementById('input-btn')
 const inputEl = document.getElementById('input-el')
 const ulEl = document.getElementById('ul-el')
+const outputBtn = document.getElementById('output-btn')
 
 //localStorage.setItem("myLeads","https://vandevo.com")
 //let name = localStorage.getItem("myName")
 
 localStorage.clear()
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
@@ -21,6 +22,14 @@ inputBtn.addEventListener("click", function(){
     localStorage.setItem("myLeads",JSON.stringify(myLeads))
     renderLeads()
 })
+
+outputBtn.addEventListener("dblclick", function(){
+    localStorage.clear()
+    myLeads = [" "]
+    renderLeads()
+}
+
+)
 
 function renderLeads(){
     let listItems = ""

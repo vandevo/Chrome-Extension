@@ -1,6 +1,8 @@
 let myLeads = []
 const inputBtn = document.getElementById('input-btn')
 const inputEl = document.getElementById('input-el')
+const tabBtn = document.getElementById('tab-btn')
+
 const ulEl = document.getElementById('ul-el')
 const outputBtn = document.getElementById('output-btn')
 
@@ -14,6 +16,10 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+tabBtn.addEventListener("click", function(){
+    
+})
 
 function render(leads){
     let listItems = ""

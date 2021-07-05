@@ -5,13 +5,13 @@ const tabBtn = document.getElementById('tab-btn')
 
 const ulEl = document.getElementById('ul-el')
 const outputBtn = document.getElementById('output-btn')
-
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
 //localStorage.setItem("myLeads","https://vandevo.com")
 //let name = localStorage.getItem("myName")
 
-localStorage.clear()
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
+
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage

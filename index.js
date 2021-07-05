@@ -5,9 +5,7 @@ const tabBtn = document.getElementById('tab-btn')
 
 const ulEl = document.getElementById('ul-el')
 const outputBtn = document.getElementById('output-btn')
-const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
+
 
 //localStorage.setItem("myLeads","https://vandevo.com")
 //let name = localStorage.getItem("myName")
@@ -21,9 +19,15 @@ if (leadsFromLocalStorage) {
 }
 
 tabBtn.addEventListener("click", function(){
+    // chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+    // let url = tabs[0].url})
+
+    chrome.tabs.query({active:true, currentWindow:true, function(tabs){
     myLeads.push(tabs[0].url)
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
+    }})
+
 })
 
 function render(leads){

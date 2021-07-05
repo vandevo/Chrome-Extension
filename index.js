@@ -5,6 +5,9 @@ const tabBtn = document.getElementById('tab-btn')
 
 const ulEl = document.getElementById('ul-el')
 const outputBtn = document.getElementById('output-btn')
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
 
 //localStorage.setItem("myLeads","https://vandevo.com")
 //let name = localStorage.getItem("myName")
@@ -18,7 +21,9 @@ if (leadsFromLocalStorage) {
 }
 
 tabBtn.addEventListener("click", function(){
-    
+    myLeads.push(tabs[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
 })
 
 function render(leads){
